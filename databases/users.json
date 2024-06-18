@@ -1,0 +1,14 @@
+{
+    "59873664J": {
+        "password": "1234",
+        "name": "Jordi",
+        "surname": "Soriano Reos",
+        "diagnosis": "Sano/a"
+    },
+    "12345678A": {
+        "password": "123",
+        "name": "John",
+        "surname": "Doe Smith",
+        "diagnosis": "Sin Diagnóstico"
+    }
+}

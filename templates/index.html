@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlzheimInk</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <img id="image" src="../static/images/alzheimink_logo.png" alt="alzheimink_logo">
+    <div id="canvasContainer">
+        <div id="sidePanel">
+            <button id="nextTaskButton" style="display: none;">>></button>
+        </div>
+        <canvas id="canvas" width="800" height="450"></canvas>
+    </div>
+    <div id="buttons">
+        <button id="showCanvasButton">Realizar Prueba</button>
+        <button id="loginButton">Iniciar Sesión</button>
+    </div>
+    <div id="loginOptions" style="display: none; text-align: center;">
+        <button id="patientLogin">Iniciar como Usuario</button>
+        <button id="adminLogin">Iniciar como Administrador</button>
+    </div>
+    <form id="loginForm" style="display: none; text-align: center;">
+        <p>Iniciar sesión como administrador:</p>
+        <input type="text" id="dni_admin" name="dni_admin" placeholder="DNI">
+        <input type="password" id="password_admin" name="password_admin" placeholder="Contraseña">
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+    <form id="patientLoginForm" style="display: none; text-align: center;">
+        <p>Iniciar sesión como usuario:</p>
+        <input type="text" id="dni_patient" name="dni_patient" placeholder="DNI">
+        <input type="password" id="password_patient" name="password_patient" placeholder="Contraseña">
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+    <form id="addDataLoginForm" style="display: none; text-align: center;">
+        <p>Esta prueba está diseñada para recopilar datos que se utilizarán en futuros modelos predictivos.<br>Por favor, introduzca el DNI del usuario que va a realizar la prueba, así como su diagnóstico correspondiente:</p>
+        <input type="text" id="dni_add_data" name="dni_add_data" placeholder="DNI">
+        <select id="diagnosis_add_data" name="diagnosis_add_data" required>
+            <option value="" disabled selected>Selecciona un diagnóstico</option>
+            <option value="0">Sano/a</option>
+            <option value="1">Enfermo/a Alzheimer</option>
+        </select>
+        <input type="submit" value="Iniciar Prueba">
+    </form>
+    <div id="adminOptions" style="display: none; text-align: center;">
+        <p>Elija una opción:</p>
+        <button id="registerPatientButton">Registrar Usuario</button>
+        <button id="consultPatientButton">Consultar Usuario</button>
+        <button id="addDataLogin">Recopilar nuevos datos</button>
+    </div>
+    <form id="registerForm" style="display: none; text-align: center;">
+        <p>Introduzca los datos de registro del Usuario:</p>
+        <div class="row">
+            <input type="text" id="name_user" name="name" placeholder="Nombre">
+            <input type="text" id="surname_user" name="surname" placeholder="Apellidos">
+        </div>
+        <div class="row">
+            <input type="text" id="password_user" name="password" placeholder="Contraseña">
+            <input type="text" id="dni_user" name="dni" placeholder="DNI">
+        </div>
+        <div class="row">
+            <select id="diagnosis" name="diagnosis" required>
+                <option value="Sin Diagnóstico">Sin Diagnóstico</option>
+                <option value="Sano/a">Sano/a</option>
+                <option value="Enfermedad de Alzheimer">Enfermo/a Alzheimer</option>
+            </select>
+        </div>
+        <div class="row">
+            <input type="submit" value="Registrar">
+        </div>
+    </form>
+    <form id="consultForm" style="display: none; text-align: center;">
+        <p>Introduzca el DNI del usuario del cual desea consultar los datos:</p>
+        <input type="text" id="dni_consult" name="dni_consult" placeholder="DNI">
+        <input type="submit" value="Consultar">
+    </form>
+    <div id="patientInfo" style="display: none; text-align: center;">
+        <div style="text-align: left; width: 80%; margin-left: auto; margin-right: auto;">
+            <h2>Información del Usuario:</h2>
+            <p id="patientName"></p>
+            <p id="patientSurname"></p>
+            <p id="patientDiagnosis"></p>
+            <h2>Tests Realizados:</h2>
+        </div>
+        <table id="patientTable"></table>
+    </div>
+    <script type="module" src="../static/script.js"></script>
+</body>
+</html>
