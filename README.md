@@ -17,7 +17,7 @@ This repository contains the application and related code for the project. The m
 - **app.py**: Contains the application developed using Flask. To run the application locally, this file must be executed.
 - **models.py**: Includes everything related to the creation, training, validation, testing, and other functions of the various developed machine learning models.
 - **app_predictor_model.py**: Contains the specific function chosen for making predictions in the application and everything it needs to operate.
-- **results_analysis.py**: Covers everything related to the analysis of results, including graphs and tables.
+- **results_analysis.py**: Covers everything related to the analysis of results of the project, including graphs and tables.
 - **index.html, script.js, canvasFunctions.js, and styles.css**: Located within the templates and static folders, these files manage the front-end of the web application.
 
 ## Important Note
